@@ -20,7 +20,6 @@ server application, :app, :web, :db, :primary => true
      run "rm -rf #{release_path}/config/database.yml"
      run "ln -s #{shared_path}/database.yml #{release_path}/config/database.yml"
      run "ln -s #{shared_path}/503.html #{release_path}/public/503.html"
-     run "mkdir #{shared_path}/cupons"
      run "ln -s #{shared_path}/cupons #{release_path}/public/cupons"
      run "cd #{deploy_to}/current && /usr/bin/env rake db:migrate RAILS_ENV=production"
    end
