@@ -1,0 +1,22 @@
+<h1>XXIV SEMANA DA EDUCAÇÃO-2012</h1>
+<h2>COMPROVANTE DE PARTICIPAÇÃO</h2>
+
+<p>
+  <strong>Codigo:</strong>
+  <%=h @formulario.codigo %>
+</p>
+<p>
+  <strong>Nome:</strong>
+  <%=h @formulario.busca_nome %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%=h @formulario.horario.strftime("%m/%d/%Y")%>
+  <strong>Hora:</strong>
+  <%=h @formulario.horario.strftime("%H:%M")%>
+</p>
+<p>
+  <%= link_to "Excluir comprovante", @formulario, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "Listar comprovantes", formularios_path %>
+</p>

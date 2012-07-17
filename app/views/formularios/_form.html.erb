@@ -1,0 +1,8 @@
+<% form_for @formulario do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :codigo, "Documento utilizado" %><br />
+    <%= f.text_field :codigo %>
+  </p>
+  <p><%= f.submit "Salvar" %></p>
+<% end %>

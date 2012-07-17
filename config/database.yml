@@ -1,0 +1,27 @@
+production:
+  adapter: mysql
+  encoding: utf8
+  database: leitor_production
+  pool: 5
+  username: root
+  password: s3inf05
+  socket: /var/run/mysqld/mysqld.sock
+
+development:
+  adapter: mysql
+  encoding: utf8
+  database: leitor_development
+  pool: 5
+  username: root
+  password: s3inf0
+  socket: /var/run/mysqld/mysqld.sock
+
+test:
+  adapter: mysql
+  encoding: utf8
+  database: leitor_test
+  pool: 5
+  username: root
+  password: s3inf0
+  socket: /var/run/mysqld/mysqld.sock
+

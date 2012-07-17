@@ -1,0 +1,28 @@
+       <table border="2" width="100%">
+       <%unless !@import.present?%>
+          <h1><%="Registros a serem importados #{@import.count}."%></h1>
+            <tr>
+              <th>Documento</th>
+              <th>Nome</th>
+            </tr>
+
+
+          <% for import in @import %>
+            <tr>
+              <td><%=h import.documento %></td>
+              <td><%=h import.nome %></td>
+            </tr>
+          <%end%>
+          <tr>
+            <td>
+              <% form_tag({:action => 'efetivar_importacao'}) do %>
+                <%= submit_tag "Quero importar!" %>
+              <% end %>
+            </td>
+          </tr>
+
+        <%else%>
+          <h1><%="Não existe registro a serem importados.Faça Upload de um arquivo Texto."%></h1>
+          <h1><%= "Na estrutura: Documento,Nome" %></h1>
+        <%end%>
+        </table>

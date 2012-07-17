@@ -1,0 +1,87 @@
+<% title "Registro de tramite" %>
+<h1>XXIV Semana de Educação</h1><br/>
+
+
+<table cellspacing="0" summary="Tabela de dados fictícios">
+  <thead>
+    <tr>
+      <th>Matricula</th>
+      <th>Data</th>
+      <th>Horario</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for formulario in @formularios %>
+      <tr>
+        <td><%=h formulario.codigo %></td>
+        <td><%=h formulario.horario %></td>
+        <td><%=h formulario.horario %></td>
+        <td><%= link_to link_to image_tag("/stylesheets/edit.png", :size => "15x15"), edit_formulario_path(formulario), :title => "Alterar" %></td>
+        <td><%= link_to(image_tag("/stylesheets/visualizar.png", :size => "15x15"), {:controller => "formularios", :action => "exibe", :id => formulario}, :title => "Visualizar")%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+    <div id="pager" class="pager">
+    	<form>
+				<span>
+					Exibir <select class="pagesize">
+							<option selected="selected"  value="10">10</option>
+							<option value="20">20</option>
+							<option value="30">30</option>
+							<option  value="40">40</option>
+					</select> registros
+				</span>
+
+				<img src="/stylesheets/first.png" class="first"/>
+    		<img src="/stylesheets/prev.png" class="prev"/>
+    		<input type="text" class="pagedisplay"/>
+    		<img src="/stylesheets/next.png" class="next"/>
+    		<img src="/stylesheets/last.png" class="last"/>
+    	</form>
+    </div>
+<p><%= link_to "New Formulario", new_formulario_path %></p>
+    <script>
+    $(function(){
+      $('table > tbody > tr > td > :checkbox').bind('click change', function(){
+        var tr = $(this).parent().parent();
+        if($(this).is(':checked')) $(tr).addClass('selected');
+        else $(tr).removeClass('selected');
+      });
+
+      $('form').submit(function(e){ e.preventDefault(); });
+
+      $('#pesquisar').keydown(function(){
+        var encontrou = false;
+        var termo = $(this).val().toLowerCase();
+        $('table > tbody > tr').each(function(){
+          $(this).find('td').each(function(){
+            if($(this).text().toLowerCase().indexOf(termo) > -1) encontrou = true;
+          });
+          if(!encontrou) $(this).hide();
+          else $(this).show();
+          encontrou = false;
+        });
+      });
+
+      $("table")
+        .tablesorter({
+          dateFormat: 'uk',
+          headers: {
+            0: {
+              sorter: false
+            },
+            5: {
+              sorter: false
+            }
+          }
+        })
+        .tablesorterPager({container: $("#pager")})
+        .bind('sortEnd', function(){
+          $('table > tbody > tr').removeClass('odd');
+          $('table > tbody > tr:odd').addClass('odd');
+        });
+
+    });
+    </script>

@@ -1,0 +1,28 @@
+I8,A,001
+
+
+Q240,024
+q831
+rN
+S4
+D7
+ZT
+JF
+OD
+R255,0
+f100
+N
+A302,219,2,2,1,1,N,"XXIV Semana da Educacao"
+A302,203,2,2,1,1,N,"Controle de acesso"
+A152,55,2,2,1,1,N,"17:17:21"
+A287,55,2,2,1,1,N,"07/16/2012"
+LO27,179,276,1
+A135,73,2,2,1,1,N,"Hora:"
+A302,138,2,2,1,1,N,"ADRIANA APARECIDA DE GOES
+"
+A301,160,2,2,1,1,N,"Matricula:"
+A259,73,2,2,1,1,N,"Data:"
+A175,160,2,2,1,1,N,"4028"
+A302,21,2,2,1,1,N,"verso de seu crachá"
+A302,37,2,2,1,1,N,"Cole este comprovante no"
+P1
