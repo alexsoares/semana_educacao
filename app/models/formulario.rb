@@ -10,7 +10,7 @@ class Formulario < ActiveRecord::Base
   end
   def cria_arquivo(identificacao,data,hora,pessoa)
     name = "#{identificacao}.txt"
-    directory = "public/horarios"
+    directory = "public/cupons"
     path = File.join(directory, name)
     texto = File.new(path,"w")
     texto.puts "I8,A,001"
