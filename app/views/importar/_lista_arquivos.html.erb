@@ -1,18 +1,20 @@
-       <table border="2" width="100%">
+       <table border="1" cellspacing="0" summary="Tabela de dados fictícios">
        <%unless !@import.present?%>
           <h1><%="Registros a serem importados #{@import.count}."%></h1>
+          <thead>
             <tr>
-              <th>Documento</th>
+              <th>Matricula</th>
               <th>Nome</th>
             </tr>
-
-
-          <% for import in @import %>
-            <tr>
-              <td><%=h import.documento %></td>
-              <td><%=h import.nome %></td>
-            </tr>
-          <%end%>
+          </thead>
+          <tbody>
+            <% for import in @import %>
+              <tr>
+                <td><%=h import.documento %></td>
+                <td><%=h import.nome %></td>
+              </tr>
+            <%end%>
+          </tbody>
           <tr>
             <td>
               <% form_tag({:action => 'efetivar_importacao'}) do %>
@@ -22,7 +24,7 @@
           </tr>
 
         <%else%>
-          <h1><%="Não existe registro a serem importados.Faça Upload de um arquivo Texto."%></h1>
-          <h1><%= "Na estrutura: Documento,Nome" %></h1>
+          <h2><%="Não existe registro a serem importados.Faça Upload de um arquivo Texto."%></h2>
+          <h2><%= "Na estrutura: Matricula,Nome" %></h2>
         <%end%>
         </table>

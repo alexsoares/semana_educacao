@@ -1,8 +1,9 @@
 class CreateFormularios < ActiveRecord::Migration
   def self.up
     create_table :formularios do |t|
-      t.integer :codigo
+      t.string :codigo
       t.datetime :horario
+      t.string :periodo
       t.timestamps
     end
   end

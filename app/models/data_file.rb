@@ -8,7 +8,7 @@ class DataFile < ActiveRecord::Base
     File.open(path, "wb") { |f| f.write(upload['datafile'].read) }
     File.open(path).readlines.each do |linha|
       documento,nome = linha.split(/,/)
-      Temp.create(:documento=>documento,:nome=>nome)
+      Temp.create(:documento=>documento.to_i,:nome=>nome)
     end
   end
 end

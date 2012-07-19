@@ -1,7 +1,7 @@
 class CreateTemps < ActiveRecord::Migration
   def self.up
     create_table :temps do |t|
-      t.integer :documento
+      t.string :documento
       t.string :nome
 
       t.timestamps

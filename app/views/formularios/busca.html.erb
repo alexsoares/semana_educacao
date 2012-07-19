@@ -1,0 +1,24 @@
+   <table>
+      <tr>
+          <% form_tag busca_formularios_path, :method => 'get' do %>
+                <td align="right"> Matricula:<%= text_field_tag :busca, params[:busca] %></td>
+                <td><%= select_tag :dia, options_for_select(Formulario::DIAS) %></td>
+                <td><%= select_tag :periodo, options_for_select(Formulario::HORARIO) %></td>
+                <td><%= submit_tag "Buscar", :name => nil %></td>
+          <% end %>
+      </tr>
+    </table>
+<%if @busca.present?%>
+  <%@busca.each do |z|%>
+    <hr/>
+    <p>
+      <%= "Matricula de inscrição: #{z.codigo}" %>
+    </p>
+    <p>
+      <%= "Nome: #{z.busca_nome}" %>
+    </p>
+    <p>
+      <%= "Data/Hora: #{z.horario.strftime("%d/%m/%Y")}/ #{z.horario.strftime("%H:%M:%S")}" %>
+    </p>
+  <%end%>
+<%end%>

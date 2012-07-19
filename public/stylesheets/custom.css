@@ -42,13 +42,13 @@ form input{
 }
 
 table{
-  width:600px;
+  width:100%;
   border:1px solid #ccc;
 }
 
 table thead th{
   background-color:#ad2525;
-  padding:6px;
+  
   color:#fff;
   text-align:center;
   font-size:14px;
@@ -59,7 +59,7 @@ table thead th.header{
 }
 
 table tbody td{
-  padding:6px;
+  
   text-align:center;
   color:#333;
 }

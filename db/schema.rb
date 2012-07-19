@@ -12,7 +12,7 @@
 ActiveRecord::Schema.define(:version => 20120713104128) do
 
   create_table "formularios", :force => true do |t|
-    t.integer  "codigo"
+    t.string   "codigo"
     t.datetime "horario"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -20,14 +20,14 @@ ActiveRecord::Schema.define(:version => 20120713104128) do
   end
 
   create_table "inscricaos", :force => true do |t|
-    t.integer  "documento"
+    t.string   "documento"
     t.string   "nome"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "temps", :force => true do |t|
-    t.integer  "documento"
+    t.string   "documento"
     t.string   "nome"
     t.datetime "created_at"
     t.datetime "updated_at"
