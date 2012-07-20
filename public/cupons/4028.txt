@@ -1,7 +1,7 @@
 I8,A,001
 
 
-Q240,024
+Q203,024
 q831
 rN
 S4
@@ -9,21 +9,21 @@ D7
 ZT
 JF
 OD
-R255,0
+R212,0
 f100
 N
-A304,230,2,2,1,1,N,"XXIV Semana da Educacao"
-A275,198,2,2,1,1,N,"Controle de acesso"
-A166,110,2,2,1,1,N,"15:12:23"
-A301,110,2,2,1,1,N,"07/19/2012"
-LO27,179,276,1
-A167,127,2,2,1,1,N,"Hora:"
-A302,151,2,2,1,1,N,"ADRIANA APARECIDA DE GOES
+A32,0,0,2,1,1,N,"XXIV Semana da Educação"
+A61,16,0,2,1,1,N,"Controle de acesso"
+A170,105,0,2,1,1,N,"15:31:00"
+A35,105,0,2,1,1,N,"07/20/2012"
+LO33,34,276,2
+A169,87,0,2,1,1,N,"Hora:"
+A34,64,0,2,1,1,N,"ADRIANA APARECIDA DE GOES
 "
-A301,172,2,2,1,1,N,"Matricula:"
-A302,127,2,2,1,1,N,"Data:"
-A175,172,2,2,1,1,N,"4028"
-A301,52,2,2,1,1,N,"verso de seu cracha"
-A301,68,2,2,1,1,N,"Cole este comprovante no"
-A301,87,2,2,1,1,N,"Seja Bem vindo!"
+A35,42,0,2,1,1,N,"Matricula:"
+A34,89,0,2,1,1,N,"Data:"
+A161,42,0,2,1,1,N,"4028"
+A35,178,0,2,1,1,N,"verso de seu crachá"
+A35,162,0,2,1,1,N,"Cole este comprovante no"
+A35,128,0,2,1,1,N,"Seja Bem vindo!"
 P1

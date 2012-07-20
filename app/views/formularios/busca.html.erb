@@ -1,4 +1,5 @@
-   <table>
+<% title "Buscar comprovantes" %><br/>
+<table>
       <tr>
           <% form_tag busca_formularios_path, :method => 'get' do %>
                 <td align="right"> Matricula:<%= text_field_tag :busca, params[:busca] %></td>
@@ -7,18 +8,21 @@
                 <td><%= submit_tag "Buscar", :name => nil %></td>
           <% end %>
       </tr>
+      
     </table>
-<%if @busca.present?%>
-  <%@busca.each do |z|%>
+    <br/>
     <hr/>
-    <p>
-      <%= "Matricula de inscrição: #{z.codigo}" %>
-    </p>
-    <p>
-      <%= "Nome: #{z.busca_nome}" %>
-    </p>
-    <p>
-      <%= "Data/Hora: #{z.horario.strftime("%d/%m/%Y")}/ #{z.horario.strftime("%H:%M:%S")}" %>
-    </p>
-  <%end%>
-<%end%>
+    <%if @busca.present?%>
+      <%@busca.each do |z|%>
+        <p>
+          <%= "Matricula de inscrição: #{z.codigo}" %>
+        </p>
+        <p>
+          <%= "Nome: #{z.busca_nome}" %>
+        </p>
+        <p>
+          <%= "Data/Hora: #{z.horario.strftime("%d/%m/%Y")}/ #{z.horario.strftime("%H:%M:%S")}" %>
+        </p>
+        <hr/>
+      <%end%>
+    <%end%>

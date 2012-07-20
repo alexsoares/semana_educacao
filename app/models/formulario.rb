@@ -29,7 +29,7 @@ class Formulario < ActiveRecord::Base
     texto.puts "I8,A,001"
     texto.puts ""
     texto.puts ""
-    texto.puts "Q240,024"
+    texto.puts "Q203,024"
     texto.puts "q831"
     texto.puts "rN"
     texto.puts "S4"
@@ -37,22 +37,22 @@ class Formulario < ActiveRecord::Base
     texto.puts "ZT"
     texto.puts "JF"
     texto.puts "OD"
-    texto.puts "R255,0"
+    texto.puts "R212,0"
     texto.puts "f100"
     texto.puts "N"
-    texto.puts 'A304,230,2,2,1,1,N,"XXIV Semana da Educacao"'
-    texto.puts 'A275,198,2,2,1,1,N,"Controle de acesso"'
-    texto.puts 'A166,110,2,2,1,1,N,"' + hora +'"'
-    texto.puts 'A301,110,2,2,1,1,N,"' + data +'"'
-    texto.puts 'LO27,179,276,1'
-    texto.puts 'A167,127,2,2,1,1,N,"Hora:"'
-    texto.puts 'A302,151,2,2,1,1,N,"' + pessoa + '"'
-    texto.puts 'A301,172,2,2,1,1,N,"Matricula:"'
-    texto.puts 'A302,127,2,2,1,1,N,"Data:"'
-    texto.puts 'A175,172,2,2,1,1,N,"' + (identificacao.to_s) +'"'
-    texto.puts 'A301,52,2,2,1,1,N,"verso de seu cracha"'
-    texto.puts 'A301,68,2,2,1,1,N,"Cole este comprovante no"'
-    texto.puts 'A301,87,2,2,1,1,N,"Seja Bem vindo!"'
+    texto.puts 'A32,0,0,2,1,1,N,"XXIV Semana da Educação"'
+    texto.puts 'A61,16,0,2,1,1,N,"Controle de acesso"'
+    texto.puts 'A170,105,0,2,1,1,N,"' + hora +'"'
+    texto.puts 'A35,105,0,2,1,1,N,"' + data +'"'
+    texto.puts 'LO33,34,276,2'
+    texto.puts 'A169,87,0,2,1,1,N,"Hora:"'
+    texto.puts 'A34,64,0,2,1,1,N,"' + pessoa + '"'
+    texto.puts 'A35,42,0,2,1,1,N,"Matricula:"'
+    texto.puts 'A34,89,0,2,1,1,N,"Data:"'
+    texto.puts 'A161,42,0,2,1,1,N,"' + (identificacao.to_s) +'"'
+    texto.puts 'A35,178,0,2,1,1,N,"verso de seu crachá"'
+    texto.puts 'A35,162,0,2,1,1,N,"Cole este comprovante no"'
+    texto.puts 'A35,128,0,2,1,1,N,"Seja Bem vindo!"'
     texto.puts "P1"
     texto.close
     salva_path(path)

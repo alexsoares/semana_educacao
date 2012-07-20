@@ -6,13 +6,29 @@ class FormulariosController < ApplicationController
   def show
     @formulario = Formulario.find(params[:id])
     session[:ip] = request.remote_ip
-    #if session[:ip] == '192.168.0.66'
-      #system("lpr -P zd-suporte1 #{@formulario.path}")
-    #else
-      #if request.remote_ip == '127.0.0.1'
-        #system("lpr -P lex #{@formulario.path}")
-      #end
-    #end
+    if session[:ip] == '192.168.1.2'
+      system("lpr -P semana1 #{@formulario.path}")
+    else
+      if request.remote_ip == '192.168.1.3'
+        system("lpr -P semana2 #{@formulario.path}")
+      else
+        if request.remote_ip == '192.168.1.4'
+          system("lpr -P semana3 #{@formulario.path}")
+        else
+          if request.remote_ip == '192.168.1.5'
+            system("lpr -P semana4 #{@formulario.path}")
+          else
+            if request.remote_ip == '192.168.1.6'
+              system("lpr -P semana5 #{@formulario.path}")
+            else
+              if request.remote_ip == '192.168.1.7'
+                system("lpr -P semana6 #{@formulario.path}")
+              end
+            end
+          end
+        end
+      end
+    end
       #redirect_to new_formulario_path
   end
 
