@@ -19,7 +19,13 @@ class Formulario < ActiveRecord::Base
   end
 
   def busca_nome
-    Inscricao.find_by_documento(self.codigo.to_s).nome
+    nome = Inscricao.find_by_documento(self.codigo.to_s).nome
+    if nome.present?
+      nome
+    else
+      "Iscrito não identificado"
+    end
+    
   end
   def cria_arquivo(identificacao,data,hora,pessoa)
     name = "#{identificacao}.txt"
