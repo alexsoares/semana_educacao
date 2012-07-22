@@ -23,7 +23,7 @@ class Formulario < ActiveRecord::Base
     if nome.present?
       nome
     else
-      "Iscrito não identificado"
+      "Inscrito não identificado"
     end
     
   end
