@@ -20,7 +20,7 @@ class Formulario < ActiveRecord::Base
 
   def busca_nome
     nome = Inscricao.find_by_documento(self.codigo.to_s).nome
-    if nome.present?
+    if nome.present? or !(nome.nil?) or !(nome.empty?)
       nome
     else
       "Inscrito não identificado"
